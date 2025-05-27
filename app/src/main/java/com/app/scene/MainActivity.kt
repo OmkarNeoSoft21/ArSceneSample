@@ -54,7 +54,7 @@ import io.github.sceneview.rememberView
 import kotlinx.coroutines.delay
 import java.util.EnumSet
 
-const val kModelFile = "models/glasses.glb"
+const val kModelFile = "models/black1.glb"
 
 class MainActivity : ComponentActivity() {
 

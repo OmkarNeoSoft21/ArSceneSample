@@ -86,7 +86,7 @@ class AppAugmentedFaceNode(
                 val cheekDistance = distance(leftCheekPose.translation, rightCheekPose.translation)
 
                 // Default glasses base width (tweak as needed for your model)
-                val defaultWidth = 0.65f
+                val defaultWidth = 0.075f
 
                 // Scale glasses proportionally to face width
                 val scaleRatio = cheekDistance / defaultWidth

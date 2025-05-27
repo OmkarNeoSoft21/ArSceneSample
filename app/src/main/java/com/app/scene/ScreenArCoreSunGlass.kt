@@ -1,7 +1,6 @@
 package com.app.scene
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -15,13 +14,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.google.android.filament.Engine
-import com.google.android.filament.IndexBuffer
 import com.google.android.filament.RenderableManager
-import com.google.android.filament.VertexBuffer
-import com.google.android.filament.gltfio.FilamentAsset
 import com.google.android.filament.gltfio.FilamentInstance
 import com.google.ar.core.AugmentedFace
-import com.google.ar.core.AugmentedFace.RegionType
 import com.google.ar.core.CameraConfig
 import com.google.ar.core.CameraConfigFilter
 import com.google.ar.core.Config
@@ -30,9 +25,7 @@ import com.google.ar.core.Frame
 import com.google.ar.core.Session
 import com.google.ar.core.TrackingFailureReason
 import com.google.ar.core.TrackingState
-import com.google.ar.sceneform.rendering.Renderable
 import io.github.sceneview.ar.ARScene
-import io.github.sceneview.ar.arcore.getUpdatedAugmentedFaces
 import io.github.sceneview.ar.node.AugmentedFaceNode
 import io.github.sceneview.ar.rememberARCameraNode
 import io.github.sceneview.ar.rememberARCameraStream
@@ -42,9 +35,6 @@ import io.github.sceneview.node.ModelNode
 import io.github.sceneview.node.Node
 import io.github.sceneview.rememberCollisionSystem
 import io.github.sceneview.rememberEngine
-import io.github.sceneview.rememberEnvironment
-import io.github.sceneview.rememberEnvironmentLoader
-import io.github.sceneview.rememberMainLightNode
 import io.github.sceneview.rememberMaterialLoader
 import io.github.sceneview.rememberModelLoader
 import io.github.sceneview.rememberNodes
@@ -53,10 +43,6 @@ import io.github.sceneview.rememberRenderer
 import io.github.sceneview.rememberScene
 import io.github.sceneview.rememberView
 import java.util.EnumSet
-import kotlin.collections.component1
-import kotlin.collections.component2
-import kotlin.collections.containsKey
-import kotlin.collections.set
 
 
 @SuppressLint("ContextCastToActivity")
@@ -206,7 +192,7 @@ fun ScreenArCoreSunGlass(modifier: Modifier) {
             onSessionResumed = {},
             onSessionPaused = {},
             onSessionUpdated = { session, updatedFrame ->
-                discordThread(session,updatedFrame)
+                customSolution(session,updatedFrame)
             },
             onGestureListener = rememberOnGestureListener(),
             /*onTouchEvent = { motionEvent,hitResult -> true},
