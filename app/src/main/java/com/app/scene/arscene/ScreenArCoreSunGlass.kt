@@ -1,4 +1,4 @@
-package com.app.scene
+package com.app.scene.arscene
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
@@ -13,6 +13,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import com.app.scene.kModelFile
 import com.google.android.filament.Engine
 import com.google.android.filament.RenderableManager
 import com.google.android.filament.gltfio.FilamentInstance

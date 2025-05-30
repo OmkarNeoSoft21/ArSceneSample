@@ -1,4 +1,4 @@
-package com.app.scene
+package com.app.scene.arscene
 
 import com.google.android.filament.Engine
 import com.google.android.filament.IndexBuffer

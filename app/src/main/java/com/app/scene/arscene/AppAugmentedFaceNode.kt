@@ -1,4 +1,4 @@
-package com.app.scene
+package com.app.scene.arscene
 
 import com.google.android.filament.Engine
 import com.google.ar.core.AugmentedFace
@@ -11,6 +11,7 @@ import io.github.sceneview.model.ModelInstance
 import io.github.sceneview.node.ModelNode
 import io.github.sceneview.node.Node
 import kotlin.math.pow
+import kotlin.math.sqrt
 
 
 class AppAugmentedFaceNode(
@@ -52,7 +53,7 @@ class AppAugmentedFaceNode(
 
     // Helper: compute Euclidean distance between 2 float arrays (3D points)
     private fun distance(a: FloatArray, b: FloatArray): Float {
-        return kotlin.math.sqrt(
+        return sqrt(
             (a[0] - b[0]).pow(2) + (a[1] - b[1]).pow(2) + (a[2] - b[2]).pow(2)
         )
     }

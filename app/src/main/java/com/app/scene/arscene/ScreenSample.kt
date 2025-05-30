@@ -1,4 +1,4 @@
-package com.app.scene
+package com.app.scene.arscene
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
